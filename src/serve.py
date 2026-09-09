@@ -15,15 +15,15 @@ def main():
         try:
             with urlopen(URL, timeout=2) as response:
                 page = response.read(8192).decode('utf-8')
-            if 'Sprite Lab' in page and './src/app.js' in page:
-                print('動畫工作台已啟動，正在為你開啟。')
+            if 'Banner Studio' in page and './src/app.js' in page:
+                print('廣告 Banner 系統已啟動，正在為你開啟。')
                 webbrowser.open(URL)
                 return
         except Exception:
             pass
         input('本機網址被其他程式佔用，請關閉該程式再試。按 Enter 關閉。')
         return
-    print('動畫工作台已開啟：'+URL, flush=True)
+    print('廣告 Banner 系統已開啟：'+URL, flush=True)
     print('使用期間請保留這個視窗，按 Control-C 可停止。', flush=True)
     webbrowser.open(URL)
     try:
