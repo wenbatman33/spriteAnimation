@@ -52,12 +52,13 @@ for ad in ads:
  (out/'banner.atlas').write_text(atlas);shutil.copy2(old/'banner.json',out/'banner.json')
  # Raster exports are encoded from pre-compression PNGs, not existing WebP files.
  source=Path('/Users/batman_work/codex-archives/five-original-production')/ad['id']/'rendered'
- frames=[Image.open(source/f'{i:03}.png').convert('RGB').resize((365,160),Image.Resampling.LANCZOS) for i in range(120)]
+ ow,oh=ad.get('width',365),ad.get('height',160)
+ frames=[Image.open(source/f'{i:03}.png').convert('RGB').resize((ow,oh),Image.Resampling.LANCZOS) for i in range(120)]
  frames[ad.get('posterFrame',0)].save(p/'poster.webp',quality=80,method=6)
  frames[0].save(p/'animation.webp',save_all=True,append_images=frames[1:],duration=[33,34,33]*40,loop=0,quality=68,method=6,minimize_size=True)
  for n in range(8):
-  im=Image.new('RGB',(1825,480))
-  for i,f in enumerate(frames[n*15:n*15+15]):im.paste(f,((i%5)*365,(i//5)*160))
+  im=Image.new('RGB',(ow*5,oh*3))
+  for i,f in enumerate(frames[n*15:n*15+15]):im.paste(f,((i%5)*ow,(i//5)*oh))
   im.save(p/f'frames-{n}.webp',quality=70,method=6)
  shutil.rmtree(p/ad['spinePath']);ad['spinePath']='spine-web15';ad['revision']='web15';ad['imageCompression']='web15'
  ad['bytes'].update(webp=(p/'animation.webp').stat().st_size,js=sum((p/f'frames-{i}.webp').stat().st_size for i in range(8)),spine=sum(f.stat().st_size for f in out.iterdir()))

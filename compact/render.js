@@ -5,9 +5,10 @@ function disposeSpine(p){
  // Spine 3.8 has no player.dispose(); allow its already queued draw to finish.
  requestAnimationFrame(()=>requestAnimationFrame(()=>{p.assetManager.dispose();p.sceneRenderer.dispose();}));
 }
-export const asset=(id,file)=>new URL(`./assets/${id}/${file}?v=${id==='casino18'?'luck18-rhythm3':id==='shield18'?'luck18-rhythm2':'web15'}`,import.meta.url).href;
+export const asset=(id,file)=>new URL(`./assets/${id}/${file}?v=${['shield18','casino18'].includes(id)?(file==='animation.mp4'?'luck18-900k4':'luck18-hd3'):'web15'}`,import.meta.url).href;
 function loadSpine(){return spineReady??=new Promise((resolve,reject)=>{if(globalThis.spine){resolve();return;}const script=document.createElement('script');script.src=new URL('./vendor/spine-player.js',import.meta.url);script.onload=resolve;script.onerror=()=>reject(Error('Spine 播放器載入失敗'));document.head.append(script);});}
 export async function renderBanner(host,ad,format,{paused=false,onReady=()=>{},onError=()=>{}}={}){
+ const width=ad.width||365,height=ad.height||160;host.style.aspectRatio=`${width}/${height}`;
  let alive=true,raf=0,player=null,v=null,elapsed=0,last=0,stopped=paused,bonesVisible=false,hasReported=false;
  const controller={bones(value){bonesVisible=value;if(player)player.config.debug.bones=value;},pause(value){stopped=value;if(v){if(value)v.pause();else v.play().catch(onError);}if(player){if(value)player.pause();else player.play();}},destroy(){alive=false;cancelAnimationFrame(raf);if(v){v.pause();v.removeAttribute('src');v.load();}disposeSpine(player);host.replaceChildren();}};
  host.replaceChildren();for(const key of ['animationTime','animationPose','playback'])delete host.dataset[key];host.dataset.format=format;host.dataset.state='loading';
@@ -15,9 +16,9 @@ export async function renderBanner(host,ad,format,{paused=false,onReady=()=>{},o
  const fail=e=>{if(!alive)return;host.dataset.state='error';onError(e);};
  (async()=>{try{
   if(format==='mp4'){
-   v=document.createElement('video');v.width=365;v.height=160;v.muted=true;v.loop=true;v.playsInline=true;v.controls=false;v.preload='auto';v.setAttribute('aria-label',ad.name+' MP4');host.append(v);v.onloadeddata=ready;v.onerror=()=>fail(Error('MP4 載入或解碼失敗'));v.src=asset(ad.id,'animation.mp4');if(!stopped)v.play().catch(()=>fail(Error('自動播放受限，請按播放')));
+   v=document.createElement('video');v.width=width;v.height=height;v.muted=true;v.loop=true;v.playsInline=true;v.controls=false;v.preload='auto';v.setAttribute('aria-label',ad.name+' MP4');host.append(v);v.onloadeddata=ready;v.onerror=()=>fail(Error('MP4 載入或解碼失敗'));v.src=asset(ad.id,'animation.mp4');if(!stopped)v.play().catch(()=>fail(Error('自動播放受限，請按播放')));
   }else if(format==='webp'){
-   const img=new Image();img.alt=ad.name+' 動畫 WebP';img.width=365;img.height=160;img.onload=ready;img.onerror=()=>fail(Error('WebP 載入失敗'));img.src=asset(ad.id,stopped?'poster.webp':'animation.webp');host.append(img);controller.pause=value=>{stopped=value;img.src=asset(ad.id,value?'poster.webp':'animation.webp');};
+   const img=new Image();img.alt=ad.name+' 動畫 WebP';img.width=width;img.height=height;img.onload=ready;img.onerror=()=>fail(Error('WebP 載入失敗'));img.src=asset(ad.id,stopped?'poster.webp':'animation.webp');host.append(img);controller.pause=value=>{stopped=value;img.src=asset(ad.id,value?'poster.webp':'animation.webp');};
   }else if(format==='js'){
    const images=await Promise.all(Array.from({length:ad.pages},(_,n)=>n).map(async n=>{const img=new Image();img.src=asset(ad.id,`frames-${n}.webp`);await img.decode();return img;}));if(!alive)return;
    const clip=document.createElement('div');clip.className='sprite-clip';clip.setAttribute('role','img');clip.setAttribute('aria-label',ad.name+' JS 逐格動畫');

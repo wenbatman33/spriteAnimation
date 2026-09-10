@@ -1,223 +1,223 @@
 
 texture-0.webp
-size: 2048,443
+size: 2048,1567
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 background
   rotate: false
   xy: 2, 2
-  size: 525, 231
-  orig: 525, 231
+  size: 1098, 431
+  orig: 1098, 431
   offset: 0, 0
   index: -1
 partner
   rotate: false
-  xy: 531, 2
-  size: 115, 172
-  orig: 115, 172
+  xy: 1104, 2
+  size: 230, 343
+  orig: 230, 343
   offset: 0, 0
   index: -1
 card-0
   rotate: false
-  xy: 650, 2
-  size: 49, 59
-  orig: 49, 59
+  xy: 1338, 2
+  size: 98, 119
+  orig: 98, 119
   offset: 0, 0
   index: -1
 card-1
   rotate: false
-  xy: 703, 2
-  size: 49, 62
-  orig: 49, 62
+  xy: 1440, 2
+  size: 98, 124
+  orig: 98, 124
   offset: 0, 0
   index: -1
 card-2
   rotate: false
-  xy: 756, 2
-  size: 49, 59
-  orig: 49, 59
+  xy: 1542, 2
+  size: 98, 119
+  orig: 98, 119
   offset: 0, 0
   index: -1
 card-3
   rotate: false
-  xy: 809, 2
-  size: 49, 62
-  orig: 49, 62
+  xy: 1644, 2
+  size: 98, 124
+  orig: 98, 124
   offset: 0, 0
   index: -1
 hostess-00
   rotate: false
-  xy: 862, 2
-  size: 203, 204
-  orig: 203, 204
+  xy: 2, 437
+  size: 406, 409
+  orig: 406, 409
   offset: 0, 0
   index: -1
 hostess-01
   rotate: false
-  xy: 1069, 2
-  size: 203, 204
-  orig: 203, 204
+  xy: 412, 437
+  size: 406, 409
+  orig: 406, 409
   offset: 0, 0
   index: -1
 hostess-02
   rotate: false
-  xy: 1276, 2
-  size: 203, 204
-  orig: 203, 204
+  xy: 822, 437
+  size: 406, 409
+  orig: 406, 409
   offset: 0, 0
   index: -1
 hostess-03
   rotate: false
-  xy: 1483, 2
-  size: 203, 204
-  orig: 203, 204
+  xy: 1232, 437
+  size: 406, 409
+  orig: 406, 409
   offset: 0, 0
   index: -1
 hostess-04
   rotate: false
-  xy: 1690, 2
-  size: 203, 204
-  orig: 203, 204
+  xy: 2, 850
+  size: 406, 409
+  orig: 406, 409
   offset: 0, 0
   index: -1
 hostess-05
   rotate: false
-  xy: 2, 237
-  size: 203, 204
-  orig: 203, 204
+  xy: 412, 850
+  size: 406, 409
+  orig: 406, 409
   offset: 0, 0
   index: -1
 hostess-06
   rotate: false
-  xy: 209, 237
-  size: 203, 204
-  orig: 203, 204
+  xy: 822, 850
+  size: 406, 409
+  orig: 406, 409
   offset: 0, 0
   index: -1
 hostess-07
   rotate: false
-  xy: 416, 237
-  size: 203, 204
-  orig: 203, 204
+  xy: 1232, 850
+  size: 406, 409
+  orig: 406, 409
   offset: 0, 0
   index: -1
 die-0-00
   rotate: false
-  xy: 623, 237
-  size: 49, 49
-  orig: 49, 49
+  xy: 1642, 850
+  size: 98, 98
+  orig: 98, 98
   offset: 0, 0
   index: -1
 die-0-01
   rotate: false
-  xy: 676, 237
-  size: 49, 49
-  orig: 49, 49
+  xy: 1744, 850
+  size: 98, 98
+  orig: 98, 98
   offset: 0, 0
   index: -1
 die-0-02
   rotate: false
-  xy: 729, 237
-  size: 49, 49
-  orig: 49, 49
+  xy: 1846, 850
+  size: 98, 98
+  orig: 98, 98
   offset: 0, 0
   index: -1
 die-0-03
   rotate: false
-  xy: 782, 237
-  size: 49, 49
-  orig: 49, 49
+  xy: 1948, 850
+  size: 98, 98
+  orig: 98, 98
   offset: 0, 0
   index: -1
 die-1-00
   rotate: false
-  xy: 835, 237
-  size: 49, 49
-  orig: 49, 49
+  xy: 2, 1263
+  size: 98, 98
+  orig: 98, 98
   offset: 0, 0
   index: -1
 die-1-01
   rotate: false
-  xy: 888, 237
-  size: 49, 49
-  orig: 49, 49
+  xy: 104, 1263
+  size: 98, 98
+  orig: 98, 98
   offset: 0, 0
   index: -1
 die-1-02
   rotate: false
-  xy: 941, 237
-  size: 49, 49
-  orig: 49, 49
+  xy: 206, 1263
+  size: 98, 98
+  orig: 98, 98
   offset: 0, 0
   index: -1
 die-1-03
   rotate: false
-  xy: 994, 237
-  size: 49, 49
-  orig: 49, 49
+  xy: 308, 1263
+  size: 98, 98
+  orig: 98, 98
   offset: 0, 0
   index: -1
 coin-0
   rotate: false
-  xy: 1047, 237
+  xy: 410, 1263
   size: 39, 39
   orig: 39, 39
   offset: 0, 0
   index: -1
 coin-1
   rotate: false
-  xy: 1090, 237
+  xy: 453, 1263
   size: 39, 39
   orig: 39, 39
   offset: 0, 0
   index: -1
 coin-2
   rotate: false
-  xy: 1133, 237
+  xy: 496, 1263
   size: 39, 39
   orig: 39, 39
   offset: 0, 0
   index: -1
 coin-3
   rotate: false
-  xy: 1176, 237
+  xy: 539, 1263
   size: 39, 39
   orig: 39, 39
   offset: 0, 0
   index: -1
 coin-4
   rotate: false
-  xy: 1219, 237
+  xy: 582, 1263
   size: 39, 39
   orig: 39, 39
   offset: 0, 0
   index: -1
 coin-5
   rotate: false
-  xy: 1262, 237
+  xy: 625, 1263
   size: 39, 39
   orig: 39, 39
   offset: 0, 0
   index: -1
 coin-6
   rotate: false
-  xy: 1305, 237
+  xy: 668, 1263
   size: 39, 39
   orig: 39, 39
   offset: 0, 0
   index: -1
 headline
   rotate: false
-  xy: 1348, 237
-  size: 421, 151
-  orig: 421, 151
+  xy: 711, 1263
+  size: 842, 302
+  orig: 842, 302
   offset: 0, 0
   index: -1
 brand-logo
   rotate: false
-  xy: 1773, 237
-  size: 49, 55
-  orig: 49, 55
+  xy: 1557, 1263
+  size: 97, 109
+  orig: 97, 109
   offset: 0, 0
   index: -1

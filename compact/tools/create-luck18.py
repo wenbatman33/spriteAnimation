@@ -151,8 +151,41 @@ def create(id):
     t=key['time'];a=int(key['color'][-2:],16)/255
     gate=max(0,min(1,(t-(1.8 if id=='casino18' else 1.25))/.25,((3.45 if id=='casino18' else 3.75)-t)/.25))
     key['color']='ffffff'+f'{round(a*gate*255):02x}'
+ # Recompose at 764x288. Spread positions horizontally, uniformly scale art.
+ for bone in s.bones[1:]:
+  bone['x']*=764/730;bone['y']*=.9
+  if bone['name'] in ['dragon','treasure']:bone['x']-=14
+  if id=='shield18' and bone['name'] in ['headline','brand-logo']:bone['x']=382
+ for slot in s.attach.values():
+  for attachment in slot.values():
+   attachment['width']*=.9;attachment['height']*=.9
+ for tracks in s.anim['bones'].values():
+  for key in tracks.get('translate',[]):key['x']*=764/730;key['y']*=.9
+ s.images['background']=ImageOps.fit(Image.open(src/'background.png').convert('RGBA'),(784,308),method=Image.Resampling.LANCZOS)
+ s.attach['background']['background'].update(width=784,height=308)
+ # Use original source pixels for a 2x-density delivery atlas, preserving layout.
+ s.images['background']=ImageOps.fit(Image.open(src/'background.png').convert('RGBA'),(1568,616),method=Image.Resampling.LANCZOS)
+ s.images['brand-logo']=m.fit(m.tight(Image.open(src/'logo.png').convert('RGBA')),140,156)
+ if id=='shield18':
+  s.images['headline']=m.fit(m.tight(titles.crop((0,0,titles.width,447))),896,420)
+  for i,im in enumerate(registered(components(src/'character.png'),1.18,(560,600))):s.images[f'knight-{i:02}']=im
+  for i in range(4):
+   im=fxcell(effects,(i*443,0,(i+1)*443,434),384,380);frame=Image.new('RGBA',(448,384));frame.alpha_composite(im,(448-im.width,384-im.height));s.images[f'dragon-{i:02}']=frame
+  s.images['treasure']=fxcell(effects,(0,435,466,887),356,340)
+  s.images['dragon-breath']=fxcell(effects,(858,439,1334,884),660,340)
+  s.images['shield-aura']=fxcell(effects,(1335,435,1774,887),530,530)
+ else:
+  s.images['headline']=m.fit(m.tight(titles.crop((0,447,titles.width,titles.height))),842,450)
+  for i,im in enumerate(registered(components(src/'character.png'),1.2,(580,584),'waist')):s.images[f'hostess-{i:02}']=im
+  s.images['partner']=fxcell(effects,(1125,413,1536,1024),370,490)
+  for j in range(4):s.images[f'card-{j}']=fxcell(effects,(0,410,394,970) if j%2==0 else (395,410,775,970),140,200)
+  for j in range(2):
+   for i in range(4):
+    im=fxcell(effects,(i*384,0,(i+1)*384,410),130,130);frame=Image.new('RGBA',(140,140));frame.alpha_composite(im,((140-im.width)//2,(140-im.height)//2));s.images[f'die-{j}-{i:02}']=frame
  bones,layers=s.finish()
- (m.STAGE/id/'meta.json').write_text(json.dumps({'id':id,'spineBones':bones,'spineLayers':layers}))
+ data=json.loads((s.out/'banner.json').read_text());data['skeleton'].update(width=764,height=288)
+ (s.out/'banner.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')))
+ (m.STAGE/id/'meta.json').write_text(json.dumps({'id':id,'spineBones':bones,'spineLayers':layers,'width':764,'height':288,'renderScale':2,'videoTargetBytes':900000}))
  print(id,bones,'bones',layers,'layers')
 
 if __name__=='__main__':

@@ -1,195 +1,195 @@
 
 texture-0.webp
-size: 2048,601
+size: 2048,2007
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 background
   rotate: false
   xy: 2, 2
-  size: 525, 231
-  orig: 525, 231
+  size: 1098, 431
+  orig: 1098, 431
   offset: 0, 0
   index: -1
 dragon-00
   rotate: false
-  xy: 531, 2
-  size: 157, 134
-  orig: 157, 134
+  xy: 1104, 2
+  size: 314, 269
+  orig: 314, 269
   offset: 0, 0
   index: -1
 dragon-01
   rotate: false
-  xy: 692, 2
-  size: 157, 134
-  orig: 157, 134
+  xy: 1422, 2
+  size: 314, 269
+  orig: 314, 269
   offset: 0, 0
   index: -1
 dragon-02
   rotate: false
-  xy: 853, 2
-  size: 157, 134
-  orig: 157, 134
+  xy: 2, 437
+  size: 314, 269
+  orig: 314, 269
   offset: 0, 0
   index: -1
 dragon-03
   rotate: false
-  xy: 1014, 2
-  size: 157, 134
-  orig: 157, 134
+  xy: 320, 437
+  size: 314, 269
+  orig: 314, 269
   offset: 0, 0
   index: -1
 dragon-breath
   rotate: false
-  xy: 1175, 2
-  size: 214, 119
-  orig: 214, 119
+  xy: 638, 437
+  size: 328, 183
+  orig: 328, 183
   offset: 0, 0
   index: -1
 shield-aura
   rotate: false
-  xy: 1393, 2
-  size: 186, 184
-  orig: 186, 184
+  xy: 970, 437
+  size: 293, 290
+  orig: 293, 290
   offset: 0, 0
   index: -1
 knight-00
   rotate: false
-  xy: 1583, 2
-  size: 196, 210
-  orig: 196, 210
+  xy: 1267, 437
+  size: 392, 420
+  orig: 392, 420
   offset: 0, 0
   index: -1
 knight-01
   rotate: false
-  xy: 1783, 2
-  size: 196, 210
-  orig: 196, 210
+  xy: 2, 861
+  size: 392, 420
+  orig: 392, 420
   offset: 0, 0
   index: -1
 knight-02
   rotate: false
-  xy: 2, 237
-  size: 196, 210
-  orig: 196, 210
+  xy: 398, 861
+  size: 392, 420
+  orig: 392, 420
   offset: 0, 0
   index: -1
 knight-03
   rotate: false
-  xy: 202, 237
-  size: 196, 210
-  orig: 196, 210
+  xy: 794, 861
+  size: 392, 420
+  orig: 392, 420
   offset: 0, 0
   index: -1
 knight-04
   rotate: false
-  xy: 402, 237
-  size: 196, 210
-  orig: 196, 210
+  xy: 1190, 861
+  size: 392, 420
+  orig: 392, 420
   offset: 0, 0
   index: -1
 knight-05
   rotate: false
-  xy: 602, 237
-  size: 196, 210
-  orig: 196, 210
+  xy: 1586, 861
+  size: 392, 420
+  orig: 392, 420
   offset: 0, 0
   index: -1
 knight-06
   rotate: false
-  xy: 802, 237
-  size: 196, 210
-  orig: 196, 210
+  xy: 2, 1285
+  size: 392, 420
+  orig: 392, 420
   offset: 0, 0
   index: -1
 knight-07
   rotate: false
-  xy: 1002, 237
-  size: 196, 210
-  orig: 196, 210
+  xy: 398, 1285
+  size: 392, 420
+  orig: 392, 420
   offset: 0, 0
   index: -1
 treasure
   rotate: false
-  xy: 1202, 237
-  size: 125, 113
-  orig: 125, 113
+  xy: 794, 1285
+  size: 249, 226
+  orig: 249, 226
   offset: 0, 0
   index: -1
 coin-0
   rotate: false
-  xy: 1331, 237
+  xy: 1047, 1285
   size: 37, 39
   orig: 37, 39
   offset: 0, 0
   index: -1
 coin-1
   rotate: false
-  xy: 1372, 237
+  xy: 1088, 1285
   size: 37, 39
   orig: 37, 39
   offset: 0, 0
   index: -1
 coin-2
   rotate: false
-  xy: 1413, 237
+  xy: 1129, 1285
   size: 37, 39
   orig: 37, 39
   offset: 0, 0
   index: -1
 coin-3
   rotate: false
-  xy: 1454, 237
+  xy: 1170, 1285
   size: 37, 39
   orig: 37, 39
   offset: 0, 0
   index: -1
 coin-4
   rotate: false
-  xy: 1495, 237
+  xy: 1211, 1285
   size: 37, 39
   orig: 37, 39
   offset: 0, 0
   index: -1
 coin-5
   rotate: false
-  xy: 1536, 237
+  xy: 1252, 1285
   size: 37, 39
   orig: 37, 39
   offset: 0, 0
   index: -1
 coin-6
   rotate: false
-  xy: 1577, 237
+  xy: 1293, 1285
   size: 37, 39
   orig: 37, 39
   offset: 0, 0
   index: -1
 coin-7
   rotate: false
-  xy: 1618, 237
+  xy: 1334, 1285
   size: 37, 39
   orig: 37, 39
   offset: 0, 0
   index: -1
 coin-8
   rotate: false
-  xy: 1659, 237
+  xy: 1375, 1285
   size: 37, 39
   orig: 37, 39
   offset: 0, 0
   index: -1
 headline
   rotate: false
-  xy: 2, 451
-  size: 448, 148
-  orig: 448, 148
+  xy: 2, 1709
+  size: 896, 296
+  orig: 896, 296
   offset: 0, 0
   index: -1
 brand-logo
   rotate: false
-  xy: 454, 451
-  size: 49, 55
-  orig: 49, 55
+  xy: 902, 1709
+  size: 97, 109
+  orig: 97, 109
   offset: 0, 0
   index: -1

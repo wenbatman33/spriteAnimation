@@ -200,10 +200,12 @@
     "loopFrames": 120,
     "pages": 8,
     "revision": "web15",
+    "width": 764,
+    "height": 288,
     "posterFrame": 75,
     "sourceFrame": [
-      730,
-      320
+      1528,
+      576
     ],
     "fit": "contain",
     "spineMode": "layered-character-action-and-effects",
@@ -211,16 +213,16 @@
     "spineViewport": {
       "x": 0,
       "y": 0,
-      "width": 730,
-      "height": 320
+      "width": 764,
+      "height": 288
     },
     "spineBones": 18,
     "spineLayers": 17,
     "bytes": {
-      "mp4": 552744,
-      "webp": 676982,
-      "js": 1893360,
-      "spine": 532331
+      "mp4": 900871,
+      "webp": 1684124,
+      "js": 5656966,
+      "spine": 1042280
     },
     "imageCompression": "web15"
   },
@@ -233,10 +235,12 @@
     "loopFrames": 120,
     "pages": 8,
     "revision": "web15",
+    "width": 764,
+    "height": 288,
     "posterFrame": 75,
     "sourceFrame": [
-      730,
-      320
+      1528,
+      576
     ],
     "fit": "contain",
     "spineMode": "layered-character-action-and-effects",
@@ -244,16 +248,16 @@
     "spineViewport": {
       "x": 0,
       "y": 0,
-      "width": 730,
-      "height": 320
+      "width": 764,
+      "height": 288
     },
     "spineBones": 19,
     "spineLayers": 18,
     "bytes": {
-      "mp4": 501277,
-      "webp": 750548,
-      "js": 1824186,
-      "spine": 435174
+      "mp4": 900448,
+      "webp": 1857570,
+      "js": 5530902,
+      "spine": 803275
     },
     "imageCompression": "web15"
   }
