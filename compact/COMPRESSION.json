@@ -83,5 +83,22 @@
     },
     "spineRegions": 250,
     "uniqueRegions": 249
+  },
+  {
+    "id": "vampire",
+    "before": {
+      "mp4": 435080,
+      "webp": 657592,
+      "js": 2122512,
+      "spine": 606909
+    },
+    "after": {
+      "mp4": 435080,
+      "webp": 464502,
+      "js": 1494764,
+      "spine": 378418
+    },
+    "spineRegions": 23,
+    "uniqueRegions": 23
   }
 ]

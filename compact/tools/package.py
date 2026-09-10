@@ -12,4 +12,4 @@ for ad in ads:
    z.writestr('index.html','<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+ad['name']+'</title><link rel="stylesheet" href="player.css"><div id="banner" class="banner-surface" style="width:365px;height:160px"></div><script type="module">import{renderBanner}from"./render.js";renderBanner(document.querySelector("#banner"),'+json.dumps(ad,ensure_ascii=False)+',"'+mode+'");</script>')
    z.writestr('README.txt','將本資料夾完整上傳至 HTTP(S) 主機，開啟 index.html。無需 npm 或 build。展示尺寸365×160。')
 (root/'catalog.json').write_text(json.dumps(ads,ensure_ascii=False,indent=2))
-print('Updated 10 standalone packages and catalog')
+print(f'Updated {len(ads)*2} standalone packages and catalog')

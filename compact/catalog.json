@@ -158,5 +158,37 @@
       "spine": 2225372
     },
     "imageCompression": "web15"
+  },
+  {
+    "id": "vampire",
+    "name": "惡魔血域・奸笑與蝙蝠",
+    "seconds": 4,
+    "fps": 30,
+    "forwardFrames": 120,
+    "loopFrames": 120,
+    "pages": 8,
+    "revision": "web15",
+    "sourceFrame": [
+      730,
+      320
+    ],
+    "fit": "contain",
+    "spineMode": "layered-facial-and-bat-sequences",
+    "spinePath": "spine-web15",
+    "spineViewport": {
+      "x": 0,
+      "y": 0,
+      "width": 730,
+      "height": 320
+    },
+    "spineBones": 13,
+    "spineLayers": 12,
+    "bytes": {
+      "mp4": 435080,
+      "webp": 464502,
+      "js": 1494764,
+      "spine": 378418
+    },
+    "imageCompression": "web15"
   }
 ]

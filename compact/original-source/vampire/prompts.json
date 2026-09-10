@@ -1,0 +1,22 @@
+{
+  "character": {
+    "prompt": "An isolated game sprite atlas on ACTUAL TRANSPARENT ALPHA background. No checkerboard drawing, no backdrop. Twelve chest-up portraits in precise 4 columns 3 rows. A handsome sinister mature aristocratic vampire, slim long pale grey angular face, narrow amber eyes, sharp arched black brows, slick black hair with widow's peak and white streaks at temples, very pointed ears, thin black moustache curled at ends, short pointed black goatee, high flared black cape collar lined crimson, gold edge trim, white silk cravat with ruby clasp. Premium 2D hand-painted Asian casino game illustration, NOT photo, NOT chibi. All twelve portraits have IDENTICAL head position, face shape, collar, shoulders and fixed chest crop. ONLY expression changes: first row four successive small smirks, second row 5 slightly showing teeth, 6 opening sly laugh with two fangs, 7 wicked gloating laugh narrow eyes, 8 same laugh with amused raised brow, third row 9 laugh softens, 10 smile narrows, 11 smirk, 12 same as first. Strong visible expression differences in central frames, tiny controlled movement otherwise. Crisp opaque face, no blur, no blends, no melting, no head-size changes. Generous real transparent gutters, complete uncut hair and cape collar. Transparent PNG artwork, no words or logos.",
+    "file": "original-source/vampire/character.png",
+    "generated": "/Users/batman_work/.codex/generated_images/01a084d7-b6d8-75d0-8a6a-c0953fdb81c8/exec-50720d03-7a7f-45f1-af0c-791a4e2d183a.png"
+  },
+  "background": {
+    "prompt": "Extra wide panoramic 365:160 game advertising background, premium hand-painted gothic fantasy illustration. Enormous luminous pale green moon in upper right, dark silhouette of needle spired Transylvanian castle in distant right, curling teal night mist over ruined stone balustrade lower edge, deep navy black shadows at left for vampire portrait. Central right lower area dark uncluttered space to place gold game logo. Rich atmospheric moonlight, ominous elegant atmosphere, crisp atmospheric layers, fine painted detail, restrained teal and silver, no red effects. Empty scenery only, no characters, no bats (added as animated layers later), no text, logos, UI or website chrome. Full bleed single continuous panoramic scene.",
+    "file": "original-source/vampire/background.png",
+    "generated": "/Users/batman_work/.codex/generated_images/01a084d7-b6d8-75d0-8a6a-c0953fdb81c8/exec-6675bfb3-9a78-41f3-aa77-cd5b831cba63.png"
+  },
+  "title": {
+    "prompt": "Transparent PNG game logo asset, reproduce the supplied game title as closely as possible. Exact Traditional Chinese text 惡魔血域 and below in small readable serif text curse and rebirth. Massive ornate bevelled gold Chinese characters with dark ruby red outer edging, dark violet enamel crest and a narrow gothic sword motif vertically behind the lettering, same premium painted slot-game logo look as reference. Wide horizontal compact composition. Only this logo, genuine alpha transparent background, no scene, no vampire, no extra text, no checkerboard. Keep the characters spelled exactly 惡 魔 血 域, crisp elegant and readable.",
+    "file": "original-source/vampire/title.png",
+    "generated": "/Users/batman_work/.codex/generated_images/01a084d7-b6d8-75d0-8a6a-c0953fdb81c8/exec-d9387328-d9be-4dff-9f26-e9283b40c7b1.png"
+  },
+  "bats": {
+    "prompt": "Transparent RGBA game sprite sheet with eight isolated flying bat poses in a precise 4-column 2-row grid. A small gothic dark charcoal bat viewed from front three-quarter angle flying right, blue moonlit edges, wide leathery wings. One continuous wingbeat: wings up, halfway down, wide horizontal, sweeping down, folded down, halfway up, horizontal upstroke, wings up. Same tiny head and body centered in each cell, same scale, large clear transparent gaps between the eight complete silhouettes. Refined painted fantasy game art, readable near-black bat shapes, no background, no checkerboard, no letters, no glows outside the wing silhouette, no scattered particles. Actual transparent PNG asset.",
+    "file": "original-source/vampire/bats.png",
+    "generated": "/Users/batman_work/.codex/generated_images/01a084d7-b6d8-75d0-8a6a-c0953fdb81c8/exec-5900ad2d-2eef-4ec9-a5b3-676346ef5ed3.png"
+  }
+}

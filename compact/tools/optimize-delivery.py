@@ -64,4 +64,7 @@ for ad in ads:
  report.append({'id':ad['id'],'before':before,'after':ad['bytes'],'spineRegions':len(regions),'uniqueRegions':len(images)})
  print(ad['id'],report[-1],flush=True)
 (ROOT/'catalog.json').write_text(json.dumps(ads,ensure_ascii=False,indent=2))
-if report:(ROOT/'COMPRESSION.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
+if report:
+ previous=json.loads((ROOT/'COMPRESSION.json').read_text()) if (ROOT/'COMPRESSION.json').exists() else []
+ combined={item['id']:item for item in previous+report}
+ (ROOT/'COMPRESSION.json').write_text(json.dumps(list(combined.values()),ensure_ascii=False,indent=2))

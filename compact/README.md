@@ -59,3 +59,9 @@ Spine 使用 region attachment 序列及骨骼圖層動畫，可由 runtime 載�
 素材匯出後執行 `python3 compact/tools/optimize-delivery.py`，再執行 `python3 compact/tools/package.py`。壓縮工具從未壓縮的製作影格編碼，保留標題解析度、降低過高的圖集像素密度，並合併 APP 重複姿勢的貼圖區域；不改時間軸或播放尺寸。已完成壓縮的版本會略過，避免反覆有損壓縮。原始美術保留供修改，不包含在客戶下載包內。
 
 每次新製作更新 catalog 時移除 `imageCompression` 標記並填新 revision，再執行壓縮流程。壓縮前後大小記於 `COMPRESSION.json`。
+
+## 新增：惡魔血域
+
+依合作廠商參考圖製作的第六款，遊戲標題「惡魔血域 / curse and rebirth」。12個透明胸像表情依序冷笑、露齒、奸笑、收回笑容；沒有光流或透明混圖。8隻蝙蝠各自有飛行路徑與8格拍翼，共13根骨骼、12圖層。
+
+原圖及內建 imagegen 的生成提示詞在 `original-source/vampire/`；`tools/create-vampire.py` 建立分層場景，後續沿用採樣、四格式輸出與交付壓縮流程。這是依參考重新繪製的角色與標題，非直接提取廠商工程素材。
