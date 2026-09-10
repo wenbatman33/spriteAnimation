@@ -1,0 +1,87 @@
+[
+  {
+    "id": "crown",
+    "before": {
+      "mp4": 676102,
+      "webp": 1114366,
+      "js": 2257264,
+      "spine": 3058488
+    },
+    "after": {
+      "mp4": 676102,
+      "webp": 800040,
+      "js": 1591296,
+      "spine": 1580075
+    },
+    "spineRegions": 130,
+    "uniqueRegions": 130
+  },
+  {
+    "id": "thunder",
+    "before": {
+      "mp4": 565021,
+      "webp": 1141850,
+      "js": 2311636,
+      "spine": 2812043
+    },
+    "after": {
+      "mp4": 565021,
+      "webp": 828984,
+      "js": 1677580,
+      "spine": 1410400
+    },
+    "spineRegions": 135,
+    "uniqueRegions": 135
+  },
+  {
+    "id": "app",
+    "before": {
+      "mp4": 455645,
+      "webp": 923832,
+      "js": 2138936,
+      "spine": 2373541
+    },
+    "after": {
+      "mp4": 455645,
+      "webp": 660814,
+      "js": 1546102,
+      "spine": 295756
+    },
+    "spineRegions": 135,
+    "uniqueRegions": 25
+  },
+  {
+    "id": "line",
+    "before": {
+      "mp4": 698273,
+      "webp": 1358864,
+      "js": 2566178,
+      "spine": 3214054
+    },
+    "after": {
+      "mp4": 698273,
+      "webp": 1026712,
+      "js": 1852620,
+      "spine": 1822347
+    },
+    "spineRegions": 135,
+    "uniqueRegions": 135
+  },
+  {
+    "id": "duel",
+    "before": {
+      "mp4": 599064,
+      "webp": 1357240,
+      "js": 2512764,
+      "spine": 4175896
+    },
+    "after": {
+      "mp4": 599064,
+      "webp": 995804,
+      "js": 1781140,
+      "spine": 2225372
+    },
+    "spineRegions": 250,
+    "uniqueRegions": 249
+  }
+]

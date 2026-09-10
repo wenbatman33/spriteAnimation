@@ -1,0 +1,8 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>365 × 160 Banner</title><link rel="stylesheet" href="./player.css"></head><body><a id="destination" target="_blank" rel="noopener noreferrer"><div id="surface" class="banner-surface"></div></a><p id="error" hidden></p><script type="module">
+import{renderBanner}from'./render.js';import{safeDestination}from'../src/url.js';
+const q=new URLSearchParams(location.search),ads=await(await fetch('./catalog.json')).json(),ad=ads.find(a=>a.id===q.get('id')),format=q.get('format')||'js';let player;
+const report=(type,extra={})=>parent.postMessage({source:'compact-banner',type,...extra},location.origin);
+const fail=e=>{document.querySelector('#error').hidden=false;document.querySelector('#error').textContent=e.message;report('error',{message:e.message});};
+if(!ad||!['js','spine'].includes(format))fail(Error('找不到廣告或格式'));else{document.title=ad.name+' · '+format;const url=safeDestination(q.get('url'));if(url)document.querySelector('#destination').href=url;player=await renderBanner(document.querySelector('#surface'),ad,format,{paused:q.get('paused')==='1',onReady:()=>report('ready'),onError:fail});}
+addEventListener('message',e=>{if(e.origin!==location.origin||e.source!==parent||e.data?.source!=='compact-studio')return;if(e.data.type==='pause')player?.pause(Boolean(e.data.value));});addEventListener('pagehide',()=>player?.destroy(),{once:true});
+</script></body></html>

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "crown",
+    "name": "德古拉榮耀・尊爵十強頭框",
+    "seconds": 4,
+    "fps": 30,
+    "forwardFrames": 120,
+    "loopFrames": 120,
+    "pages": 8,
+    "revision": "web15",
+    "sourceFrame": [
+      730,
+      320
+    ],
+    "fit": "contain",
+    "spineMode": "original-layered-sequence",
+    "spinePath": "spine-web15",
+    "spineViewport": {
+      "x": 0,
+      "y": 0,
+      "width": 730,
+      "height": 320
+    },
+    "spineBones": 12,
+    "spineLayers": 11,
+    "bytes": {
+      "mp4": 676102,
+      "webp": 800040,
+      "js": 1591296,
+      "spine": 1580075
+    },
+    "imageCompression": "web15"
+  },
+  {
+    "id": "thunder",
+    "name": "全台獨家・1000X 轉盤連開中",
+    "seconds": 4,
+    "fps": 30,
+    "forwardFrames": 120,
+    "loopFrames": 120,
+    "pages": 8,
+    "revision": "web15",
+    "sourceFrame": [
+      730,
+      320
+    ],
+    "fit": "contain",
+    "spineMode": "original-layered-sequence",
+    "spinePath": "spine-web15",
+    "spineViewport": {
+      "x": 0,
+      "y": 0,
+      "width": 730,
+      "height": 320
+    },
+    "spineBones": 17,
+    "spineLayers": 16,
+    "bytes": {
+      "mp4": 565021,
+      "webp": 828984,
+      "js": 1677580,
+      "spine": 1410400
+    },
+    "imageCompression": "web15"
+  },
+  {
+    "id": "app",
+    "name": "雙平台上架・下載 APP 現領 1288 金幣",
+    "seconds": 4,
+    "fps": 30,
+    "forwardFrames": 120,
+    "loopFrames": 120,
+    "pages": 8,
+    "revision": "web15",
+    "sourceFrame": [
+      730,
+      320
+    ],
+    "fit": "contain",
+    "spineMode": "original-layered-sequence",
+    "spinePath": "spine-web15",
+    "spineViewport": {
+      "x": 0,
+      "y": 0,
+      "width": 730,
+      "height": 320
+    },
+    "spineBones": 17,
+    "spineLayers": 16,
+    "bytes": {
+      "mp4": 455645,
+      "webp": 660814,
+      "js": 1546102,
+      "spine": 295756
+    },
+    "imageCompression": "web15"
+  },
+  {
+    "id": "line",
+    "name": "關注官方 LINE@・天天領優惠",
+    "seconds": 4,
+    "fps": 30,
+    "forwardFrames": 120,
+    "loopFrames": 120,
+    "pages": 8,
+    "revision": "web15",
+    "sourceFrame": [
+      730,
+      320
+    ],
+    "fit": "contain",
+    "spineMode": "original-layered-sequence",
+    "spinePath": "spine-web15",
+    "spineViewport": {
+      "x": 0,
+      "y": 0,
+      "width": 730,
+      "height": 320
+    },
+    "spineBones": 17,
+    "spineLayers": 16,
+    "bytes": {
+      "mp4": 698273,
+      "webp": 1026712,
+      "js": 1852620,
+      "spine": 1822347
+    },
+    "imageCompression": "web15"
+  },
+  {
+    "id": "duel",
+    "name": "中西強檔・巔峰對決・流水投注榜",
+    "seconds": 4,
+    "fps": 30,
+    "forwardFrames": 120,
+    "loopFrames": 120,
+    "pages": 8,
+    "revision": "web15",
+    "sourceFrame": [
+      730,
+      320
+    ],
+    "fit": "contain",
+    "spineMode": "original-layered-sequence",
+    "spinePath": "spine-web15",
+    "spineViewport": {
+      "x": 0,
+      "y": 0,
+      "width": 730,
+      "height": 320
+    },
+    "spineBones": 13,
+    "spineLayers": 12,
+    "bytes": {
+      "mp4": 599064,
+      "webp": 995804,
+      "js": 1781140,
+      "spine": 2225372
+    },
+    "imageCompression": "web15"
+  }
+]
