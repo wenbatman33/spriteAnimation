@@ -10,6 +10,6 @@ for(const id of process.argv.slice(2).length?process.argv.slice(2):['crown','thu
   state.update(i?1/30:0.00001);state.apply(sk);sk.updateWorldTransform();
   frames.push(sk.drawOrder.filter(slot=>slot.attachment).map(slot=>{const a=slot.attachment,b=slot.bone;const matrix=[b.a,b.b,b.c,b.d,b.worldX,b.worldY];assert(matrix.every(Number.isFinite));return {name:a.name,slot:slot.data.name,matrix,width:a.width,height:a.height,alpha:slot.color.a*a.color.a,add:slot.data.blendMode===1};}));
  }
- assert(frames[0].length>=11);assert(new Set(frames.map(f=>f.map(x=>x.name).join('|'))).size>=(id==='vampire'?20:110));
+ assert(frames[0].length>=11);assert(new Set(frames.map(f=>f.map(x=>x.name).join('|'))).size>=(id==='vampire'?20:['shield18','casino18'].includes(id)?8:110));
  fs.writeFileSync(path.join(stage,id,'poses.json'),JSON.stringify(frames));console.log(id,'120 runtime poses',raw.bones.length,'bones');
 }

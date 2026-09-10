@@ -100,5 +100,39 @@
     },
     "spineRegions": 23,
     "uniqueRegions": 23
+  },
+  {
+    "id": "shield18",
+    "before": {
+      "mp4": 552744,
+      "webp": 869068,
+      "js": 2641408,
+      "spine": 816563
+    },
+    "after": {
+      "mp4": 552744,
+      "webp": 676982,
+      "js": 1893360,
+      "spine": 532331
+    },
+    "spineRegions": 27,
+    "uniqueRegions": 27
+  },
+  {
+    "id": "casino18",
+    "before": {
+      "mp4": 501277,
+      "webp": 911806,
+      "js": 2484316,
+      "spine": 639290
+    },
+    "after": {
+      "mp4": 501277,
+      "webp": 750548,
+      "js": 1824186,
+      "spine": 435174
+    },
+    "spineRegions": 31,
+    "uniqueRegions": 31
   }
 ]

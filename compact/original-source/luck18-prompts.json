@@ -1,0 +1,45 @@
+{
+  "mode": "built-in image_gen",
+  "entries": [
+    {
+      "id": "shield18",
+      "type": "background",
+      "path": "/Users/batman_work/.codex/generated_images/01a084d7-b6d8-75d0-8a6a-c0953fdb81c8/exec-5322d323-f09c-4313-9697-284efcf3f706.png"
+    },
+    {
+      "id": "shield18",
+      "type": "character",
+      "path": "/Users/batman_work/.codex/generated_images/01a084d7-b6d8-75d0-8a6a-c0953fdb81c8/exec-90a9eed3-6f73-49fd-aada-abba46497613.png"
+    },
+    {
+      "id": "shield18",
+      "type": "effects",
+      "path": "/Users/batman_work/.codex/generated_images/01a084d7-b6d8-75d0-8a6a-c0953fdb81c8/exec-c4fc51f5-556c-444e-8b21-d52bc7244565.png"
+    },
+    {
+      "id": "casino18",
+      "type": "background",
+      "path": "/Users/batman_work/.codex/generated_images/01a084d7-b6d8-75d0-8a6a-c0953fdb81c8/exec-be09e245-ace3-4a24-a389-f122055c9087.png"
+    },
+    {
+      "id": "casino18",
+      "type": "character",
+      "path": "/Users/batman_work/.codex/generated_images/01a084d7-b6d8-75d0-8a6a-c0953fdb81c8/exec-13573e89-b585-4bdb-958a-fe834a2c821b.png"
+    },
+    {
+      "id": "casino18",
+      "type": "effects",
+      "path": "/Users/batman_work/.codex/generated_images/01a084d7-b6d8-75d0-8a6a-c0953fdb81c8/exec-b1a2326b-ed04-4696-b329-063caa3d8e03.png"
+    },
+    {
+      "id": "shield18",
+      "type": "titles",
+      "path": "/Users/batman_work/.codex/generated_images/01a084d7-b6d8-75d0-8a6a-c0953fdb81c8/exec-a6fa1a83-776d-4dfb-9393-7705a8439d61.png"
+    }
+  ],
+  "shieldCharacter": "Use case: ads-marketing. Make a TRUE TRANSPARENT RGBA sprite sheet, 4 columns x 2 rows, exactly 8 evenly spaced frames of the same blond heroic paladin from reference, golden silver armor, blue accents, ornate golden shield held in LEFT hand and sword in RIGHT hand. Full body visible including boots and sword tip, nothing clipped, consistent body proportions, identical camera/scale/baseline every frame. Smooth small continuous action: from calm guarded pose, raises shield toward viewer slightly and draws sword back, then triumphantly lifts sword a little, returns to guard. Eight closely spaced drawing poses, no dramatic discontinuities. Broad chest but anatomically correct arms/hands. Facing three-quarter RIGHT so can stand at left of banner. Each frame confined to equal cell, separated with generous transparent gutters. NO background, NO text, NO logo, NO ground shadows. Premium detailed fantasy game illustration matching reference knight identity and armor. Not checkerboard background: real transparent alpha.",
+  "casinoCharacter": "Use case: ads-marketing. TRUE transparent RGBA animation sheet with exactly 8 frames, grid 4 columns 2 rows. Same elegant adult blonde woman from reference, jeweled small tiara, red and gold evening dress, blue jeweled necklace, polished glamorous anime game style. Waist-up portraits, entire head hair crown and hands inside each cell. Camera fixed, same face, same scale, same waist baseline in all frames. A subtle playful action: she presents her open LEFT palm toward RIGHT, lifts palm a little, smiles, winks one eye briefly, opens eyes and returns to start. 8 consecutive closely spaced keyframes; restrained anatomically correct gestures, no morphing, no extra fingers. Face and torso must stay registered in every cell. 4 equal columns, 2 equal rows, ample transparent gutters, no clipped hair. No dice, no objects in her palm, no text, no background, no painted checkerboard. Real transparent alpha. Draw the character with fine detail and confident attractive expression.",
+  "shieldEffects": "Create a production raster asset sheet on TRUE TRANSPARENT alpha. Premium gold fire fantasy illustration matching reference. Layout EXACT 4 columns by 2 rows, 8 equal cells with generous empty transparent margins, every object fully contained. TOP ROW: four consecutive poses of SAME black-and-crimson dragon head with neck facing LEFT, opens jaw progressively from closed to wide snarling. No fire attached to dragon. BOTTOM ROW left to right: (1) open luxurious wooden gold treasure chest heaped with coins, (2) isolated shiny round gold coin frontal view, (3) orange gold fire breath plume pointed LEFT with pale-hot core on RIGHT, (4) a brilliant golden magical circular shield aura on transparent. No humans, no text or logos, no scenery. Each of the 8 cells separated, no overlapping cell boundaries. Actual transparent background not checkerboard painting.",
+  "casinoEffects": "Create TRUE TRANSPARENT RGBA production sprite asset sheet for glamorous purple casino advertising matching attached illustration style. Exact 4 columns x 2 rows with generous gutters and eight fully separated assets. TOP ROW 4 cells: same white polished rounded gambling die shown at four consecutive orientations around a diagonal axis, coherent cube geometry, correct dark pips, glossy pink purple highlights, centered same size. BOTTOM ROW 4 cells: cell1 one complete ace of hearts playing card front; cell2 one complete king of spades playing card front; cell3 isolated lustrous gold casino coin; cell4 adult handsome young dark-haired man in white shirt and charcoal vest holding a whisky tumbler at waist, full head to hips, playful smile. No background, no lettering except actual card markings, no logo, no checkerboard. All objects fully inside equal grid cell boundaries with clear transparent gaps. Premium detailed anime illustration, clear silhouettes.",
+  "titles": "Use case ads-marketing. Create TRUE transparent RGBA typography asset sheet, two title graphics vertically stacked with huge transparent separation. Top half: ornate epic fantasy GOLD beveled Chinese typography and thin elegant baroque gold framing. Exact simplified Chinese headline \"18神之盾现世\" on one line, with smaller TWO lines below \"解锁18面《神圣之盾》\" then \"获得终极宝藏！\". Huge legible headline, smaller yet readable subtitle. No other text. Bottom half: radically different playful slanted bold casino typographic treatment in white silver 3D with thick purple magenta outlines, exact simplified Chinese \"棋牌激情加码\" on first line, \"返水日领18,888\" on second line (number 18,888 dominant huge), third line \"大放送\". Bright modern luminous bevelled chunky type, no fancy frame. Both title graphics landscape proportions about2:1. No people, no background, no logos. Genuine transparent background. Spell exact Chinese text accurately. NO extra words or numerals."
+}

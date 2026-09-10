@@ -53,7 +53,7 @@ for ad in ads:
  # Raster exports are encoded from pre-compression PNGs, not existing WebP files.
  source=Path('/Users/batman_work/codex-archives/five-original-production')/ad['id']/'rendered'
  frames=[Image.open(source/f'{i:03}.png').convert('RGB').resize((365,160),Image.Resampling.LANCZOS) for i in range(120)]
- frames[0].save(p/'poster.webp',quality=80,method=6)
+ frames[ad.get('posterFrame',0)].save(p/'poster.webp',quality=80,method=6)
  frames[0].save(p/'animation.webp',save_all=True,append_images=frames[1:],duration=[33,34,33]*40,loop=0,quality=68,method=6,minimize_size=True)
  for n in range(8):
   im=Image.new('RGB',(1825,480))

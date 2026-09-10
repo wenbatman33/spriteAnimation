@@ -190,5 +190,71 @@
       "spine": 378418
     },
     "imageCompression": "web15"
+  },
+  {
+    "id": "shield18",
+    "name": "18神之盾现世 · 解锁终极宝藏",
+    "seconds": 4,
+    "fps": 30,
+    "forwardFrames": 120,
+    "loopFrames": 120,
+    "pages": 8,
+    "revision": "web15",
+    "posterFrame": 75,
+    "sourceFrame": [
+      730,
+      320
+    ],
+    "fit": "contain",
+    "spineMode": "layered-character-action-and-effects",
+    "spinePath": "spine-web15",
+    "spineViewport": {
+      "x": 0,
+      "y": 0,
+      "width": 730,
+      "height": 320
+    },
+    "spineBones": 18,
+    "spineLayers": 17,
+    "bytes": {
+      "mp4": 552744,
+      "webp": 676982,
+      "js": 1893360,
+      "spine": 532331
+    },
+    "imageCompression": "web15"
+  },
+  {
+    "id": "casino18",
+    "name": "棋牌激情加码 · 返水日领18,888",
+    "seconds": 4,
+    "fps": 30,
+    "forwardFrames": 120,
+    "loopFrames": 120,
+    "pages": 8,
+    "revision": "web15",
+    "posterFrame": 75,
+    "sourceFrame": [
+      730,
+      320
+    ],
+    "fit": "contain",
+    "spineMode": "layered-character-action-and-effects",
+    "spinePath": "spine-web15",
+    "spineViewport": {
+      "x": 0,
+      "y": 0,
+      "width": 730,
+      "height": 320
+    },
+    "spineBones": 19,
+    "spineLayers": 18,
+    "bytes": {
+      "mp4": 501277,
+      "webp": 750548,
+      "js": 1824186,
+      "spine": 435174
+    },
+    "imageCompression": "web15"
   }
 ]

@@ -65,3 +65,19 @@ Spine 使用 region attachment 序列及骨骼圖層動畫，可由 runtime 載�
 依合作廠商參考圖製作的第六款，遊戲標題「惡魔血域 / curse and rebirth」。12個透明胸像表情依序冷笑、露齒、奸笑、收回笑容；沒有光流或透明混圖。8隻蝙蝠各自有飛行路徑與8格拍翼，共13根骨骼、12圖層。
 
 原圖及內建 imagegen 的生成提示詞在 `original-source/vampire/`；`tools/create-vampire.py` 建立分層場景，後續沿用採樣、四格式輸出與交付壓縮流程。這是依參考重新繪製的角色與標題，非直接提取廠商工程素材。
+
+
+## 新增：18 品牌兩款簡體 Banner
+
+- `shield18`：18神之盾现世，骑士举盾挥剑、巨龙吐息、护盾亮起、宝箱金币跃出。
+- `casino18`：棋牌激情加码，女主角托手眨眼、骰子翻转、纸牌浮动、金币抛洒。
+
+沿用用户提供的 `參考/logo.png`，没有重绘 Logo。其余素材由内建 imagegen 依参考重新绘制。画面采用简体中文，原始主视觉参考中的 18、18,888 保留；显示365×160，4秒循环，MP4730×320。角色保留完整轮廓，以脚底／腰线对齐，独立部件由 Spine 骨骼驱动，角色关键姿势直接切换，不使用光流或交叉渐变。Spine RuntimeJSON/atlas，可播放；不含 `.spine` 编辑器工程。
+
+生成提示词与文件对应：`original-source/luck18-prompts.json`。原图分别在 `original-source/shield18/` 和 `original-source/casino18/`。成品分别在 `assets/shield18/` 和 `assets/casino18/`，下载包没有原始大图或其他活动素材。
+
+离线重制：`create-luck18.py` → `sample-original.cjs shield18 casino18` → `export-original.py shield18 casino18` → `deliver-luck18.py` → `optimize-delivery.py` → `package.py shield18 casino18`。后两个参数只更新本次下载包。网页无需 build。
+
+18 品牌节奏修订：人物错开进场，约0.9秒起标题弹入，1.25秒起金币接续，3.65秒后退场。删除底部额外 CTA 小字；原活动标题内容保留。四格式共用时间轴，poster 使用2.5秒完整构图。
+
+节奏差异修订：神盾标题0.92秒登场；棋牌人物更快进场，骰子0.42秒起错开落下，标题延至1.42秒弹入，眨眼动作同步延后0.62秒，金币1.8秒接续，棋牌3.4秒起退场。两款循环仍为4秒，所有交付格式一致。
