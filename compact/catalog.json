@@ -222,9 +222,11 @@
       "mp4": 900871,
       "webp": 1684124,
       "js": 5656966,
-      "spine": 1042280
+      "spine": 1042280,
+      "rive": 708753
     },
-    "imageCompression": "web15"
+    "imageCompression": "web15",
+    "riveImages": 27
   },
   {
     "id": "casino18",
@@ -257,8 +259,10 @@
       "mp4": 900448,
       "webp": 1857570,
       "js": 5530902,
-      "spine": 803275
+      "spine": 803275,
+      "rive": 579507
     },
-    "imageCompression": "web15"
+    "imageCompression": "web15",
+    "riveImages": 31
   }
 ]

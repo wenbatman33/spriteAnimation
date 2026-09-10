@@ -1,16 +1,20 @@
-let spineReady;
+let spineReady,riveReady;
+function loadRive(){return riveReady??=new Promise((resolve,reject)=>{
+ const setup=()=>{globalThis.rive.RuntimeLoader.setWasmFallbackUrl(null);globalThis.rive.RuntimeLoader.setWasmUrl(new URL('./vendor/rive/rive.wasm',import.meta.url).href);resolve();};
+ if(globalThis.rive){setup();return;}const script=document.createElement('script');script.src=new URL('./vendor/rive/rive.js',import.meta.url);script.onload=setup;script.onerror=()=>reject(Error('Rive 播放器載入失敗'));document.head.append(script);
+});}
 function disposeSpine(p){
  if(!p)return;
  p.pause();p.stopRendering();clearTimeout(p.cancelId);
  // Spine 3.8 has no player.dispose(); allow its already queued draw to finish.
  requestAnimationFrame(()=>requestAnimationFrame(()=>{p.assetManager.dispose();p.sceneRenderer.dispose();}));
 }
-export const asset=(id,file)=>new URL(`./assets/${id}/${file}?v=${['shield18','casino18'].includes(id)?(file==='animation.mp4'?'luck18-900k4':'luck18-hd3'):'web15'}`,import.meta.url).href;
+export const asset=(id,file)=>new URL(`./assets/${id}/${file}?v=${['shield18','casino18'].includes(id)?(file.endsWith('.riv')||file==='rive-package.zip'?'rive1':file==='animation.mp4'?'luck18-900k4':'luck18-hd3'):'web15'}`,import.meta.url).href;
 function loadSpine(){return spineReady??=new Promise((resolve,reject)=>{if(globalThis.spine){resolve();return;}const script=document.createElement('script');script.src=new URL('./vendor/spine-player.js',import.meta.url);script.onload=resolve;script.onerror=()=>reject(Error('Spine 播放器載入失敗'));document.head.append(script);});}
 export async function renderBanner(host,ad,format,{paused=false,onReady=()=>{},onError=()=>{}}={}){
  const width=ad.width||365,height=ad.height||160;host.style.aspectRatio=`${width}/${height}`;
- let alive=true,raf=0,player=null,v=null,elapsed=0,last=0,stopped=paused,bonesVisible=false,hasReported=false;
- const controller={bones(value){bonesVisible=value;if(player)player.config.debug.bones=value;},pause(value){stopped=value;if(v){if(value)v.pause();else v.play().catch(onError);}if(player){if(value)player.pause();else player.play();}},destroy(){alive=false;cancelAnimationFrame(raf);if(v){v.pause();v.removeAttribute('src');v.load();}disposeSpine(player);host.replaceChildren();}};
+ let alive=true,raf=0,player=null,rivePlayer=null,resizeObserver=null,v=null,elapsed=0,last=0,stopped=paused,bonesVisible=false,hasReported=false;
+ const controller={bones(value){bonesVisible=value;if(player)player.config.debug.bones=value;},pause(value){stopped=value;if(rivePlayer){if(value)rivePlayer.pause();else rivePlayer.play('idle');host.dataset.playback=value?'paused':'playing';}if(v){if(value)v.pause();else v.play().catch(onError);}if(player){if(value)player.pause();else player.play();}},destroy(){alive=false;cancelAnimationFrame(raf);if(v){v.pause();v.removeAttribute('src');v.load();}disposeSpine(player);resizeObserver?.disconnect();rivePlayer?.cleanup();host.replaceChildren();}};
  host.replaceChildren();for(const key of ['animationTime','animationPose','playback'])delete host.dataset[key];host.dataset.format=format;host.dataset.state='loading';
  const ready=()=>{if(!alive||hasReported)return;hasReported=true;host.dataset.state='ready';onReady();};
  const fail=e=>{if(!alive)return;host.dataset.state='error';onError(e);};
@@ -28,6 +32,14 @@ export async function renderBanner(host,ad,format,{paused=false,onReady=()=>{},o
     if(previous!==frame){const page=Math.floor(frame/15),cell=frame%15;images.forEach((img,n)=>img.hidden=n!==page);images[page].style.left=`-${cell%5*100}%`;images[page].style.top=`-${Math.floor(cell/5)*100}%`;clip.dataset.frame=frame;previous=frame;}
     raf=requestAnimationFrame(tick);
    }raf=requestAnimationFrame(tick);ready();
+   }else if(format==='rive'){
+   await loadRive();if(!alive)return;
+   const canvas=document.createElement('canvas');canvas.setAttribute('role','img');canvas.setAttribute('aria-label',ad.name+' Rive 動畫');host.append(canvas);
+   rivePlayer=new rive.Rive({src:asset(ad.id,'animation.riv'),canvas,autoplay:!stopped,animations:'idle',layout:new rive.Layout({fit:rive.Fit.Contain,alignment:rive.Alignment.Center}),
+    onLoad(){if(!alive)return;rivePlayer.resizeDrawingSurfaceToCanvas();if(stopped)rivePlayer.pause();host.dataset.playback=stopped?'paused':'playing';host.dataset.runtime='rive-2.42.0';ready();},
+    onLoadError(){fail(Error('Rive 素材載入或解碼失敗'));}
+   });
+   resizeObserver=new ResizeObserver(()=>{if(alive)rivePlayer.resizeDrawingSurfaceToCanvas();});resizeObserver.observe(host);
   }else if(format==='spine'){
    await loadSpine();if(!alive)return;const viewport=ad.spineViewport||{x:0,y:0,width:730,height:320};
    player=new spine.SpinePlayer(host,{jsonUrl:asset(ad.id,`${ad.spinePath}/banner.json`),atlasUrl:asset(ad.id,`${ad.spinePath}/banner.atlas`),animation:'idle',loop:true,alpha:true,premultipliedAlpha:false,backgroundColor:'#00000000',showControls:false,showLoading:false,viewport:{...viewport,padLeft:'0%',padRight:'0%',padTop:'0%',padBottom:'0%'},success(p){if(!alive){disposeSpine(p);return;}player=p;p.config.debug.bones=bonesVisible;Object.assign(p.config.viewport,viewport);p.setAnimation('idle',true);p.previousViewport=null;if(stopped)p.pause();else p.play();let reported=false;function monitor(){if(!alive)return;host.dataset.animationTime=p.animationState.getCurrent(0).trackTime.toFixed(3);host.dataset.animationPose=p.skeleton.slots.map(s=>s.attachment?.name||'-').join('|');host.dataset.playback=p.paused?'paused':'playing';if(!reported){reported=true;ready();}raf=requestAnimationFrame(monitor);}raf=requestAnimationFrame(monitor);},error(p,error){fail(Error(String(error)));}});

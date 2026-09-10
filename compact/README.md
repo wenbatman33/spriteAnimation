@@ -91,3 +91,16 @@ Spine 使用 region attachment 序列及骨骼圖層動畫，可由 runtime 載�
 显示尺寸保持764×288，MP4改为1528×576、H.264 两遍编码，目标约900 KB；重新从原始美术生成高密度人物、背景和标题图层，不是放大旧影片。WebP及JS仍为764×288，Spine图集也使用较高密度素材。神盾标题及Logo中心统一为x=382。
 
 MP4 网络交付预算：`videoTargetBytes=900000`，`tools/encode-mp4.py` 直接从渲染原帧两遍编码，保留1528×576、30FPS、4秒、无音轨。神盾900871 bytes，棋牌900448 bytes。
+
+## Rive 試作（兩款 18 品牌活動）
+
+`?format=rive#shield18` 可切換 Rive；其他六款尚未轉製，選全域 Rive 時維持 MP4 並在頁首說明。兩款仍以 764×288 展示、4 秒循環。
+
+這是官方 Rive Canvas 2.42.0 播放的真實 `.riv`：內嵌 WebP 圖像，人物姿勢分別顯示，標題、角色、特效由 Rive 的位置、旋轉、縮放、透明度時間軸驅動。不是影片，也不是完整 Banner 的逐格圖片替換。此次是沿用現有美術的分層移植，不是純向量重繪或 Rive 編輯器專案；`create-rive.py` 是僅支援這類圖像圖層的實驗性產檔工具，不是通用 Spine 轉換器。光效採 Rive screen 混合，與原 Spine additive 會有視覺差異。
+
+下載／嵌入提供 `.riv` 單檔與 `rive-package.zip`。完整包包含本機版播放器，解壓縮後放到 HTTP(S) 主機即可使用，不需要 npm 或 build。單獨 `.riv` 仍需要網站整合 Rive 播放器。
+
+檔案比較請看 `RIVE.json` 和 `catalog.json`。Rive 約 709 KB／580 KB（全部圖片已內嵌），MP4 約 901 KB／900 KB。另需共用 JavaScript + WASM 2,342,802 bytes，首訪可能比 MP4 總下載量更大；同頁兩款共用一次，快取後可重用。HTTP gzip/Brotli 會改變實際傳輸量。Rive 圖層圖片採 1.25×、標題 1.5×，MP4 為 2×；不是相同解析度與編碼品質的無損比較。
+
+官方容量建議：https://rive.app/docs/getting-started/best-practices
+Rive 含大量點陣圖時，圖片仍是主要體積來源，不保證比 MP4 小。播放器 MIT 授權和版本來源位於 `vendor/rive/`。
