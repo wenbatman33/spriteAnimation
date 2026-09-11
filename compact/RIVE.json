@@ -1,26 +1,26 @@
 [
   {
     "id": "shield18",
-    "bytes": 708753,
+    "bytes": 455879,
     "embeddedImages": 27,
     "imageObjects": 27,
-    "imageBytes": 574154,
+    "imageBytes": 321290,
     "duration": 4,
     "artboard": [
-      764,
-      288
+      531,
+      200
     ]
   },
   {
     "id": "casino18",
-    "bytes": 579507,
+    "bytes": 411988,
     "embeddedImages": 31,
     "imageObjects": 31,
-    "imageBytes": 407204,
+    "imageBytes": 239694,
     "duration": 4,
     "artboard": [
-      764,
-      288
+      531,
+      200
     ]
   }
 ]

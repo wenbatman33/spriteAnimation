@@ -104,3 +104,10 @@ MP4 网络交付预算：`videoTargetBytes=900000`，`tools/encode-mp4.py` 直�
 
 官方容量建議：https://rive.app/docs/getting-started/best-practices
 Rive 含大量點陣圖時，圖片仍是主要體積來源，不保證比 MP4 小。播放器 MIT 授權和版本來源位於 `vendor/rive/`。
+
+
+## 雙尺寸投放：531 × 200 與 764 × 288
+
+最後兩款神之盾與棋牌可在同一張卡片切換531×200與764×288，沒有新增卡片。MP4為1062×400（2×），WebP及JS每格為531×200；Spine viewport與Rive artboard皆為531×200。764×288原版素材另外保留在assets/shield18-764與assets/casino18-764，並提供原版五種格式及獨立素材包；catalog.json的variants描述尺寸版本。頁面及卡片標題置中。
+
+目前MP4約722KB／687KB，Rive約456KB／412KB，實際各格式容量以catalog.json為準；上方舊版本容量記錄僅作歷史對照。

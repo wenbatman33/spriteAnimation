@@ -9,7 +9,7 @@ function disposeSpine(p){
  // Spine 3.8 has no player.dispose(); allow its already queued draw to finish.
  requestAnimationFrame(()=>requestAnimationFrame(()=>{p.assetManager.dispose();p.sceneRenderer.dispose();}));
 }
-export const asset=(id,file)=>new URL(`./assets/${id}/${file}?v=${['shield18','casino18'].includes(id)?(file.endsWith('.riv')||file==='rive-package.zip'?'rive1':file==='animation.mp4'?'luck18-900k4':'luck18-hd3'):'web15'}`,import.meta.url).href;
+export const asset=(id,file)=>new URL(`./assets/${id}/${file}?v=${['shield18','casino18'].includes(id)?'luck18-531-v1':'web15'}`,import.meta.url).href;
 function loadSpine(){return spineReady??=new Promise((resolve,reject)=>{if(globalThis.spine){resolve();return;}const script=document.createElement('script');script.src=new URL('./vendor/spine-player.js',import.meta.url);script.onload=resolve;script.onerror=()=>reject(Error('Spine 播放器載入失敗'));document.head.append(script);});}
 export async function renderBanner(host,ad,format,{paused=false,onReady=()=>{},onError=()=>{}}={}){
  const width=ad.width||365,height=ad.height||160;host.style.aspectRatio=`${width}/${height}`;

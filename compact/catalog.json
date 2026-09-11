@@ -199,13 +199,13 @@
     "forwardFrames": 120,
     "loopFrames": 120,
     "pages": 8,
-    "revision": "web15",
-    "width": 764,
-    "height": 288,
+    "revision": "luck18-531-v1",
+    "width": 531,
+    "height": 200,
     "posterFrame": 75,
     "sourceFrame": [
-      1528,
-      576
+      1062,
+      400
     ],
     "fit": "contain",
     "spineMode": "layered-character-action-and-effects",
@@ -213,20 +213,59 @@
     "spineViewport": {
       "x": 0,
       "y": 0,
-      "width": 764,
-      "height": 288
+      "width": 531,
+      "height": 200
     },
     "spineBones": 18,
     "spineLayers": 17,
     "bytes": {
-      "mp4": 900871,
-      "webp": 1684124,
-      "js": 5656966,
-      "spine": 1042280,
-      "rive": 708753
+      "mp4": 722029,
+      "webp": 1041470,
+      "js": 3243100,
+      "spine": 1042367,
+      "rive": 455879
     },
     "imageCompression": "web15",
-    "riveImages": 27
+    "riveImages": 27,
+    "variants": [
+      {
+        "id": "shield18-764",
+        "name": "18神之盾现世 · 解锁终极宝藏",
+        "seconds": 4,
+        "fps": 30,
+        "forwardFrames": 120,
+        "loopFrames": 120,
+        "pages": 8,
+        "revision": "web15",
+        "width": 764,
+        "height": 288,
+        "posterFrame": 75,
+        "sourceFrame": [
+          1528,
+          576
+        ],
+        "fit": "contain",
+        "spineMode": "layered-character-action-and-effects",
+        "spinePath": "spine-web15",
+        "spineViewport": {
+          "x": 0,
+          "y": 0,
+          "width": 764,
+          "height": 288
+        },
+        "spineBones": 18,
+        "spineLayers": 17,
+        "bytes": {
+          "mp4": 900871,
+          "webp": 1684124,
+          "js": 5656966,
+          "spine": 1042280,
+          "rive": 708753
+        },
+        "imageCompression": "web15",
+        "riveImages": 27
+      }
+    ]
   },
   {
     "id": "casino18",
@@ -236,13 +275,13 @@
     "forwardFrames": 120,
     "loopFrames": 120,
     "pages": 8,
-    "revision": "web15",
-    "width": 764,
-    "height": 288,
+    "revision": "luck18-531-v1",
+    "width": 531,
+    "height": 200,
     "posterFrame": 75,
     "sourceFrame": [
-      1528,
-      576
+      1062,
+      400
     ],
     "fit": "contain",
     "spineMode": "layered-character-action-and-effects",
@@ -250,19 +289,58 @@
     "spineViewport": {
       "x": 0,
       "y": 0,
-      "width": 764,
-      "height": 288
+      "width": 531,
+      "height": 200
     },
     "spineBones": 19,
     "spineLayers": 18,
     "bytes": {
-      "mp4": 900448,
-      "webp": 1857570,
-      "js": 5530902,
-      "spine": 803275,
-      "rive": 579507
+      "mp4": 686568,
+      "webp": 1214404,
+      "js": 3231960,
+      "spine": 803362,
+      "rive": 411988
     },
     "imageCompression": "web15",
-    "riveImages": 31
+    "riveImages": 31,
+    "variants": [
+      {
+        "id": "casino18-764",
+        "name": "棋牌激情加码 · 返水日领18,888",
+        "seconds": 4,
+        "fps": 30,
+        "forwardFrames": 120,
+        "loopFrames": 120,
+        "pages": 8,
+        "revision": "web15",
+        "width": 764,
+        "height": 288,
+        "posterFrame": 75,
+        "sourceFrame": [
+          1528,
+          576
+        ],
+        "fit": "contain",
+        "spineMode": "layered-character-action-and-effects",
+        "spinePath": "spine-web15",
+        "spineViewport": {
+          "x": 0,
+          "y": 0,
+          "width": 764,
+          "height": 288
+        },
+        "spineBones": 19,
+        "spineLayers": 18,
+        "bytes": {
+          "mp4": 900448,
+          "webp": 1857570,
+          "js": 5530902,
+          "spine": 803275,
+          "rive": 579507
+        },
+        "imageCompression": "web15",
+        "riveImages": 31
+      }
+    ]
   }
 ]

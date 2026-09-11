@@ -5,3 +5,10 @@ body{background:#0d1118;color:#eff0ec;font:14px/1.6 system-ui,-apple-system,sans
 /* Keep delivery-size previews at 1:1; narrow screens scroll within the card. */
 .card.card-wide .banner-surface{width:var(--banner-width);max-width:none;aspect-ratio:var(--banner-ratio)}
 .card.card-wide .stage-wrap{overflow-x:auto}
+
+/* Center page and campaign headings independently of the size label. */
+.intro{text-align:center}.intro>p:last-child{margin-left:auto;margin-right:auto}
+.card-wide .card-head{display:grid;grid-template-columns:1fr;text-align:center;gap:6px}
+.card-wide .card-head .kind{margin-left:0}
+
+.size-tabs{display:flex;gap:8px;justify-content:center;margin-top:5px}.size-tabs button{font-size:12px}.size-tabs button[aria-pressed=true]{background:#c1e7a5;color:#1d3323;border-color:#c1e7a5}

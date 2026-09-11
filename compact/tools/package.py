@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,zipfile,sys
 root=Path(__file__).resolve().parents[1];ads=json.loads((root/'catalog.json').read_text())
-for ad in ads:
+for ad in [v for a in ads for v in [a,*a.get('variants',[])]]:
  if sys.argv[1:] and ad['id'] not in sys.argv[1:]:continue
  width,height=ad.get('width',365),ad.get('height',160)
  p=root/'assets'/ad['id'];ad['bytes']['spine']=sum((p/f).stat().st_size for f in [str(f.relative_to(p)) for f in sorted((p/ad['spinePath']).iterdir()) if f.suffix in ['.json','.atlas','.webp']])
